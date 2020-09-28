@@ -13,3 +13,8 @@ steps:
     fork: true
     repositories:
       from_secret: int_repo
+
+  - name: after
+    image: alpine
+    commands:
+    - echo "After build"
