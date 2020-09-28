@@ -1,0 +1,13 @@
+---
+kind: pipeline
+name: default
+
+steps:
+- name: trigger  
+  image: plugins/downstream
+  settings:
+    server: https://drone-dev.scalr-labs.net/
+    token: 0576afcdbb22a53976d4fc5c59ab2032
+    fork: true
+    repositories:
+      - vmotso-test-org/int-hello-world/
