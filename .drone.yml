@@ -12,6 +12,9 @@ steps:
       from_secret: drone_token
     repositories:
       from_secret: int_repo
+  when: &event_tag
+      event:
+        - tag
 
 - name: after
   image: alpine
