@@ -12,9 +12,13 @@ steps:
       from_secret: drone_token
     repositories:
       from_secret: int_repo
-  when: &event_tag
+  params:
+      - DRONE_EVENT=${DRONE_EVENT}
+      - DRONE_TEST="hello"
+  when:
       event:
         - tag
+        - push
 
 - name: after
   image: alpine
