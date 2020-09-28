@@ -13,8 +13,7 @@ steps:
     repositories:
       from_secret: int_repo
   params:
-      - TESTER=vmotso
-      #- DRONE_EVENT=${DRONE_EVENT}
+      - TESTER=qwerty
   when:
       event:
         - tag
