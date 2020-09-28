@@ -13,8 +13,8 @@ steps:
     repositories:
       from_secret: int_repo
   params:
-      - DRONE_EVENT=${DRONE_EVENT}
-      - DRONE_TEST="hello"
+      - TESTER=vmotso
+      #- DRONE_EVENT=${DRONE_EVENT}
   when:
       event:
         - tag
