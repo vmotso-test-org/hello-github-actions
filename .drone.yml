@@ -10,4 +10,4 @@ steps:
     token: 0576afcdbb22a53976d4fc5c59ab2032
     fork: true
     repositories:
-      - vmotso-test-org/int-hello-world/
+      - vmotso-test-org/int-hello-world
