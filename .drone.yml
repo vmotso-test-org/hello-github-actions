@@ -14,7 +14,7 @@ steps:
     repositories:
       from_secret: int_repo
 
-  - name: after
-    image: alpine
-    commands:
-    - echo "After build"
+- name: after
+  image: alpine
+  commands:
+  - echo "After build"
