@@ -7,7 +7,8 @@ steps:
   image: plugins/downstream
   settings:
     server: https://drone-dev.scalr-labs.net/
-    token: 0576afcdbb22a53976d4fc5c59ab2032
+    token:
+      from_secret: drone_token
     fork: true
     repositories:
       - vmotso-test-org/int-hello-world
