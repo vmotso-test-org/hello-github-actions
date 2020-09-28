@@ -11,7 +11,6 @@ steps:
     token:
       from_secret: drone_token
     fork: true
-    wait: true
     repositories:
       from_secret: int_repo
 
