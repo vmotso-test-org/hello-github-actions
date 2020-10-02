@@ -1,20 +1,17 @@
 name: Default
 
-on: push
+on: [push, pull_request]
 
 jobs:
   base:
-    name: Linting and unit tests
+    name: Base checks and tests
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Set up Go 1.11.4
         uses: actions/setup-go@v2
         with:
           go-version: "1.11.4"
-        id: go
-
-      - name: Check out code into the Go module directory
-        uses: actions/checkout@v2
 
       - name: Code formatting
         run: test -z $(gofmt -l .)
