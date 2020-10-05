@@ -8,16 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Go 1.11.4
+      - name: fmt
         uses: actions/setup-go@v2
         with:
           go-version: "1.11.4"
-
-      - name: Code formatting
         run: test -z $(gofmt -l .)
 
-      - name: Built-in analyzers
-        run: go vet
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v2
+        with:
+          version: v2.2.0
 
       # - name: Unit tests
       #   run: make test
