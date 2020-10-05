@@ -16,7 +16,7 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
         with:
-          version: v2.2.0
+          version: v2.2
 
       - name: fmt
         run: test -z $(gofmt -l .)
