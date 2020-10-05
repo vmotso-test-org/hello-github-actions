@@ -4,20 +4,22 @@ on: [push, pull_request]
 
 jobs:
   base:
-    name: Base checks and tests
+    name: base
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: fmt
+      - name: Set up Go 1.11.4
         uses: actions/setup-go@v2
         with:
           go-version: "1.11.4"
-        run: test -z $(gofmt -l .)
 
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
         with:
           version: v2.2.0
+
+      - name: fmt
+        run: test -z $(gofmt -l .)
 
       # - name: Unit tests
       #   run: make test
